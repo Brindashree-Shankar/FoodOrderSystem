@@ -1,0 +1,119 @@
+﻿@model FoodOrderSystem.Database.Order
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="content-wrapper">
+    <section class="content-header">
+        <h2>Delete</h2>
+    </section>
+
+    <section class="content">
+        <h3>Are you sure you want to delete this?</h3>
+        <div>
+            <h4>Order</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.ProductId)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ProductId)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Item)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Item)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Price)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Price)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.TotalPrice)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.TotalPrice)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.OrderStatus)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.OrderStatus)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.OrderDate)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.OrderDate)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.DeliverdDate)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.DeliverdDate)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Rating)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Rating)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Discount)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Discount)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Restorent.Name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Restorent.Name)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.User.Name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.User.Name)
+                </dd>
+
+            </dl>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-actions no-color">
+                    <input type="submit" value="Delete" class="btn btn-default" /> |
+                    @Html.ActionLink("Back to List", "Index")
+                </div>
+            }
+        </div>
+        </section>
+</div>
